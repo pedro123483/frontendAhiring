@@ -1,5 +1,5 @@
+// imports requireds
 import { Grid, Typography, TextField, Stack, Button } from "@mui/material";
-import "../styles/Register.css";
 import { Link } from "react-router-dom";
 import { Snackbar } from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
@@ -9,6 +9,7 @@ import axios from "axios";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
 
+// component responsible for rendering the login page
 const Login = () => {
     const [vertical, setVertical] = useState("top");
     const [horizontal, setHorizontal] = useState("right");
@@ -21,6 +22,7 @@ const Login = () => {
     const [emailDoesNotMatch, setEmailDoesNotMatch] = useState(false);
     const [passwordDoesNotMatch, setPasswordDoesNotMatch] = useState(false);
 
+    // feedback registered successfully
     const Alert = forwardRef(function Alert(props, ref) {
         return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
     });
@@ -33,6 +35,7 @@ const Login = () => {
         setIsRegistered(false);
     };
 
+    // get inputs and then make api call to save the information in the database
     const handleLogin = (e) => {
         e.preventDefault();
         const configuration = {

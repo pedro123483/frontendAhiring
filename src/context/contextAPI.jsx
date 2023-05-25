@@ -1,3 +1,4 @@
+// context API helps handle states in differents pages
 import { createContext, useState } from "react";
 
 export const ContextAPI = createContext();

@@ -1,12 +1,12 @@
+// imports requireds
 import { Grid, Typography, TextField, Stack, Button } from "@mui/material";
-import "../styles/Register.css";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import axios from "axios";
 import { ContextAPI } from "../context/contextAPI";
 import { useNavigate } from "react-router-dom";
 
-
+// component responsible for rendering the register page
 const Register = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -17,6 +17,7 @@ const Register = () => {
     const [userAlreadyExists, setUserAlreadyExists] = useState(false);
     const [isSubmit, setIsSubmit] = useState(false);
 
+    // get the inputs and then make api call to send to database
     const handleSubmit = () => {
         const configuration = {
             method: "post",

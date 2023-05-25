@@ -1,3 +1,4 @@
+// imports requireds
 import "../App.css";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
@@ -5,6 +6,7 @@ import { Stack } from "@mui/material";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
+// code responsible for rendering the index page
 const Index = () => {
     return (
         <Grid container justifyContent="center">
