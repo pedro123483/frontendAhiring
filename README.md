@@ -1,2 +1,2 @@
-# backendAhiring
+# frontendAhiring
 Project for Makers Fellowship Challenge
